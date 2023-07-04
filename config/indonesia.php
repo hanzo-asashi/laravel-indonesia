@@ -7,7 +7,7 @@ return [
     /**
      * Table prefix for indonesia tables: provinces, cities, districts and villages.
      */
-    'table_prefix' => 'indonesia_',
+    'table_prefix' => 'idn_',
 
     /**
      * API Configuration.
@@ -30,12 +30,12 @@ return [
         /**
          * The route name for Indonesia API.
          */
-        'route_name' => 'api.indonesia',
+        'route_name' => 'api.idn',
 
         /**
          * The route prefix for Indonesia API.
          */
-        'route_prefix' => 'api/indonesia',
+        'route_prefix' => 'api/idn',
 
         /**
          * Specify which column will be displayed in the response data.
@@ -43,13 +43,13 @@ return [
          */
         'response_columns' => [
             //.
-            'province' => ['code', 'name'],
+            'province' => ['code', 'name', 'province_id'],
 
-            'city' => ['code', 'province_code', 'name'],
+            'city' => ['code', 'province_code', 'name', 'city_id'],
 
-            'district' => ['code', 'city_code', 'name'],
+            'district' => ['code', 'city_code', 'name', 'district_id'],
 
-            'village' => ['code', 'district_code', 'name'],
+            'village' => ['code', 'district_code', 'name', 'village_id'],
         ],
     ],
 ];

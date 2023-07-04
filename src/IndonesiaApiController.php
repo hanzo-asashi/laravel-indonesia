@@ -1,6 +1,6 @@
 <?php
 
-namespace KodePandai\Indonesia;
+namespace HanzoAsashi\Indonesia;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
@@ -36,8 +36,9 @@ class IndonesiaApiController extends Controller
     {
         $query = City::select(config('indonesia.api.response_columns.city'));
 
-        if ($request->filled('province_code')) {
-            $query->where('province_code', $request->province_code);
+        if ($request->filled('province_code') || $request->filled('province_id')) {
+            $query->where('province_code', $request->province_code)
+                ->orWhere('province_id', $request->province_id);
         }
 
         if ($request->filled('province_name')) {
@@ -58,8 +59,9 @@ class IndonesiaApiController extends Controller
     {
         $query = District::select(config('indonesia.api.response_columns.district'));
 
-        if ($request->filled('city_code')) {
-            $query->where('city_code', $request->city_code);
+        if ($request->filled('city_code') || $request->filled('city_id')) {
+            $query->where('city_code', $request->city_code)
+                 ->orWhere('city_id', $request->city_id);
         }
 
         if ($request->filled('city_name')) {
@@ -90,7 +92,8 @@ class IndonesiaApiController extends Controller
         $query = Village::select(config('indonesia.api.response_columns.village'));
 
         if ($request->filled('district_code')) {
-            $query->where('district_code', $request->district_code);
+            $query->where('district_code', $request->district_code)
+                 ->orWhere('district_id', $request->district_id);
         }
 
         if ($request->filled('district_name')) {

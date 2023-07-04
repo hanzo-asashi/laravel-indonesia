@@ -12,7 +12,7 @@ class Village extends Model
 {
     use HasRelationships;
 
-    protected $primaryKey = 'code';
+    protected $primaryKey = 'village_id';
 
     protected $fillable = [
         'code', 'district_code', 'name', 'latitude', 'longitude', 'postal_code',

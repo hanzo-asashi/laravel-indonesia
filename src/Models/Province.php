@@ -12,7 +12,7 @@ class Province extends Model
 {
     use HasRelationships;
 
-    protected $primaryKey = 'code';
+    protected $primaryKey = 'province_id';
 
     protected $fillable = [
         'code', 'name', 'latitude', 'longitude',

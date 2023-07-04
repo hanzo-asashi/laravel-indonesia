@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasOneThrough;
 
 class District extends Model
 {
-    protected $primaryKey = 'code';
+    protected $primaryKey = 'district_id';
 
     protected $fillable = [
         'code', 'city_code', 'name', 'latitude', 'longitude',
