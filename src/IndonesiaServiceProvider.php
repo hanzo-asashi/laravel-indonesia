@@ -1,6 +1,6 @@
 <?php
 
-namespace KodePandai\Indonesia;
+namespace HanzoAsashi\Indonesia;
 
 use Illuminate\Support\ServiceProvider;
 

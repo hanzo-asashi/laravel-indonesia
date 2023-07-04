@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use KodePandai\Indonesia\IndonesiaApiController;
+use HanzoAsashi\Indonesia\IndonesiaApiController;
 
 Route::middleware(config('indonesia.api.middleware'))
     ->prefix(config('indonesia.api.route_prefix'))

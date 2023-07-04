@@ -1,12 +1,12 @@
 {
-    "name": "kodepandai/laravel-indonesia",
+    "name": "hanzo-asashi/laravel-indonesia",
     "description": "Indonesia administrative data for laravel",
     "keywords": [
         "laravel",
         "indonesia",
         "administrative"
     ],
-    "homepage": "https://github.com/kodepandai/laravel-indonesia",
+    "homepage": "https://github.com/hanzo-asashi/laravel-indonesia",
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
@@ -15,6 +15,7 @@
         "staudenmeir/eloquent-has-many-deep": "^1.11"
     },
     "require-dev": {
+        "roave/security-advisories": "dev-latest",
         "friendsofphp/php-cs-fixer": "^3.0",
         "orchestra/testbench": "^5.0|^6.0|^7.0|^8.0",
         "pestphp/pest": "^1|^2",
@@ -22,18 +23,18 @@
     },
     "autoload": {
         "psr-4": {
-            "KodePandai\\Indonesia\\": "src/"
+            "HanzoAsashi\\Indonesia\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "KodePandai\\Indonesia\\Tests\\": "tests/"
+            "HanzoAsashi\\Indonesia\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "KodePandai\\Indonesia\\IndonesiaServiceProvider"
+                "HanzoAsashi\\Indonesia\\IndonesiaServiceProvider"
             ]
         }
     },

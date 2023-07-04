@@ -1,6 +1,6 @@
 <?php
 
-namespace KodePandai\Indonesia\Models;
+namespace HanzoAsashi\Indonesia\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;

@@ -2,11 +2,11 @@
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\Config;
-use KodePandai\Indonesia\Models\City;
-use KodePandai\Indonesia\Models\District;
-use KodePandai\Indonesia\Models\Province;
-use KodePandai\Indonesia\Models\Village;
-use KodePandai\Indonesia\Tests\TestCase;
+use HanzoAsashi\Indonesia\Models\City;
+use HanzoAsashi\Indonesia\Models\District;
+use HanzoAsashi\Indonesia\Models\Province;
+use HanzoAsashi\Indonesia\Models\Village;
+use HanzoAsashi\Indonesia\Tests\TestCase;
 
 uses(TestCase::class);
 
@@ -167,7 +167,7 @@ it('can get new districts added in v2', function () {
     expect($district->name)->toBe('BAKONGAN TIMUR');
     expect($district->latitude)->toBe('NULL');
     expect($district->longitude)->toBe('NULL');
-    
+
     $district = District::find(911823);
     expect($district->code)->toBe(911823);
     expect($district->name)->toBe('KOROWAY BULUANOP');
@@ -181,7 +181,7 @@ it('can get new villages added in v2', function () {
     expect($village->name)->toBe('PATUMBAK I');
     expect($village->latitude)->toBe('NULL');
     expect($village->longitude)->toBe('NULL');
-    
+
     $village = Village::find(9201502009);
     expect($village->code)->toBe(9201502009);
     expect($village->name)->toBe('MLARON');

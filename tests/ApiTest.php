@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Config;
-use KodePandai\Indonesia\Tests\TestCase;
+use HanzoAsashi\Indonesia\Tests\TestCase;
 
 use function Pest\Laravel\getJson;
 

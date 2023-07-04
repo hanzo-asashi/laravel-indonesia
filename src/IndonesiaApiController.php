@@ -8,10 +8,10 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
-use KodePandai\Indonesia\Models\City;
-use KodePandai\Indonesia\Models\District;
-use KodePandai\Indonesia\Models\Province;
-use KodePandai\Indonesia\Models\Village;
+use HanzoAsashi\Indonesia\Models\City;
+use HanzoAsashi\Indonesia\Models\District;
+use HanzoAsashi\Indonesia\Models\Province;
+use HanzoAsashi\Indonesia\Models\Village;
 
 class IndonesiaApiController extends Controller
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace KodePandai\Indonesia\Tests;
+namespace HanzoAsashi\Indonesia\Tests;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\Artisan;
-use KodePandai\Indonesia\IndonesiaServiceProvider;
+use HanzoAsashi\Indonesia\IndonesiaServiceProvider;
 
 /**
  * @see https://packages.tools/testbench/basic/testcase.html

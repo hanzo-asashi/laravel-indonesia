@@ -1,13 +1,13 @@
 <?php
 
-namespace KodePandai\Indonesia;
+namespace HanzoAsashi\Indonesia;
 
+use HanzoAsashi\Indonesia\Models\City;
+use HanzoAsashi\Indonesia\Models\District;
+use HanzoAsashi\Indonesia\Models\Province;
+use HanzoAsashi\Indonesia\Models\Village;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Schema;
-use KodePandai\Indonesia\Models\City;
-use KodePandai\Indonesia\Models\District;
-use KodePandai\Indonesia\Models\Province;
-use KodePandai\Indonesia\Models\Village;
 
 class IndonesiaDatabaseSeeder extends Seeder
 {
@@ -35,7 +35,7 @@ class IndonesiaDatabaseSeeder extends Seeder
     {
         Province::truncate();
 
-        $content = file_get_contents(__DIR__.'/../database/raw/provinces.csv.gz');
+        $content = file_get_contents(__DIR__ . '/../database/raw/provinces.csv.gz');
 
         $data = $this->csvToArray(gzdecode($content));
 
@@ -58,7 +58,7 @@ class IndonesiaDatabaseSeeder extends Seeder
     {
         City::truncate();
 
-        $content = file_get_contents(__DIR__.'/../database/raw/cities.csv.gz');
+        $content = file_get_contents(__DIR__ . '/../database/raw/cities.csv.gz');
 
         $data = $this->csvToArray(gzdecode($content));
 
@@ -82,7 +82,7 @@ class IndonesiaDatabaseSeeder extends Seeder
     {
         District::truncate();
 
-        $content = file_get_contents(__DIR__.'/../database/raw/districts.csv.gz');
+        $content = file_get_contents(__DIR__ . '/../database/raw/districts.csv.gz');
 
         $data = $this->csvToArray(gzdecode($content));
 
@@ -106,12 +106,12 @@ class IndonesiaDatabaseSeeder extends Seeder
     {
         Village::truncate();
 
-        $path = __DIR__.'/../database/raw/villages';
+        $path = __DIR__ . '/../database/raw/villages';
 
         $files = array_diff(scandir($path), ['.', '..']);
 
         foreach ($files as $file) {
-            $content = file_get_contents($path.'/'.$file);
+            $content = file_get_contents($path . '/' . $file);
 
             $data = $this->csvToArray(gzdecode($content));
 
@@ -138,7 +138,7 @@ class IndonesiaDatabaseSeeder extends Seeder
         $data = [];
 
         foreach (explode("\n", $content) as $item) {
-            if (! empty($item)) {
+            if (!empty($item)) {
                 $data[] = str_getcsv($item);
             }
         }

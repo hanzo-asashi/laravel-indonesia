@@ -43,7 +43,7 @@ Call `IndonesiaDatabaseSeeder` in your `DatabaseSeeder`:
 ```php
 // file: database/seeders/DatabaseSeeder.php
 
-use KodePandai\Indonesia\IndonesiaDatabaseSeeder;
+use HanzoAsashi\Indonesia\IndonesiaDatabaseSeeder;
 
 //..
 public function run(): void
@@ -59,10 +59,10 @@ This package has 4 base models (`Province`, `City`, `District`, `Village`)
 and each model has relations to other models.
 
 ```php
-use \KodePandai\Indonesia\Models\Province;
-use \KodePandai\Indonesia\Models\City;
-use \KodePandai\Indonesia\Models\District;
-use \KodePandai\Indonesia\Models\Village;
+use HanzoAsashi\Indonesia\Models\Province;
+use HanzoAsashi\Indonesia\Models\City;
+use HanzoAsashi\Indonesia\Models\District;
+use HanzoAsashi\Indonesia\Models\Village;
 
 $province = Province::first();
 $province->cities; // get cities of the province
